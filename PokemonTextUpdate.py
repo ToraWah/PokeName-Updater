@@ -1,4 +1,5 @@
 # Text Writer
+# Version 0.1
 # Melody McGee, 2020
 # Designed to update pokemon information in a livestream via text
  
@@ -10,21 +11,21 @@
 
 # Pokemon type and name variables
 p1 = input("Pokemon in slot 1? ")
-p2 = "test"
-p3 = "test"
-p4 = "test"
-p5 = "test"
-p6 = "test"
 n1 = input(p1 + " nickname? ")
-n2 = "test"
-n3 = "test"
-n4 = "test"
-n5 = "test"
-n6 = "test"
+p2 = input("Pokemon in slot 2? ")
+n2 = input(p2 + " nickname? ")
+p3 = input("Pokemon in slot 3? ")
+n3 = input(p3 + " nickname? ")
+p4 = input("Pokemon in slot 4? ")
+n4 = input(p4 + " nickname? ")
+p5 = input("Pokemon in slot 5? ")
+n5 = input(p5 + " nickname? ")
+p6 = input("Pokemon in slot 6? ")
+n6 = input(p6 + " nickname? ")
 
 
 
-
+# Writing out to file for OBS to read
 pokemon1 = open("pokemon1.txt", "w")
 pokemon1.write(p1)
 pokemon1.close()
