@@ -1,5 +1,5 @@
 # Text Writer
-# Version 0.1
+# Version 0.2
 # Melody McGee, 2020
 # Designed to update pokemon information in a livestream via text
  
@@ -8,6 +8,8 @@
 # Add image copy/rename
 # Add revive counter per pokemon
 # Maintain database of pokemon caught
+
+import csv
 
 # Pokemon type and name variables
 p1 = input("Pokemon in slot 1? ")
@@ -73,3 +75,13 @@ pokemon6.close()
 nickname6 = open("nickname6.txt", "w")
 nickname6.write(n6)
 nickname6.close()
+
+with open('pkmn.csv', mode='w') as poke_file:
+    pkmn_writer = csv.writer(poke_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    pkmn_writer.writerow(['Pokemon','Nickname','Dex Number','Revives Left'])
+    pkmn_writer.writerow([p1,n1,000,2])
+    pkmn_writer.writerow([p2,n2,000,2])
+    pkmn_writer.writerow([p3,n3,000,2])
+    pkmn_writer.writerow([p4,n4,000,2])
+    pkmn_writer.writerow([p5,n5,000,2])
+    pkmn_writer.writerow([p6,n6,000,2])
